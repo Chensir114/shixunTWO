@@ -1,0 +1,148 @@
+<view class="box">
+  <view class="top">
+    <image class="mag" src="/image/icon/banner1.png"></image>
+  </view>
+  <view class="cen">
+    <view class="tu">
+      <image class="age" src="/image/icon/zixun-3.png"></image>
+      <view class="zx">咨询</view>
+    </view>
+    <view class="tu">
+      <image class="age" src="/image/icon/jilu-2.png"></image>
+      <view class="zx">起诉状</view>
+    </view>
+    <view class="tu">
+      <image class="age" src="/image/icon/zhushou_zhengchang.png"></image>
+      <view class="zx">起诉状</view>
+    </view>
+    <view class="tu">
+      <image class="age" src="/image/icon/zhengceguwen.png"></image>
+      <view class="zx">法律顾问</view>
+    </view>
+  </view>
+  <view class="lv">
+    <image class="tui" src="/image/icon/圆角矩形 2.png"></image>
+    <text> 推荐律师</text>
+
+  </view>
+  <view class="ma">
+    <view class="ma1">
+      <image class="m1" src="/image/icon/组 1 拷贝 24.png"></image>
+      <view>马豹</view>
+    </view>
+    <view class="ma2">
+      <view class="maa1">
+        <view>北京广渠律师事务所</view>
+        <view class="maaa">
+          <image class="lvshi" src="/image/icon/lvshifuwu.png"></image>
+          <view>5年</view>
+        </view>
+      </view>
+      <view class="maa2">
+        <image class="you" src="/image/icon/youxiu.png"></image>
+        <view class="sp1">优选律师</view>
+
+        <image class="you" src="/image/icon/wangpai.png"></image>
+        <view>王牌律师</view>
+
+      </view>
+      <view class="p1">
+        擅长领域:婚姻家事、单位劳动争议、个人劳动争议、</view>
+      <view class="p1">
+        交通事故、
+      </view>
+    </view>
+
+
+  </view>
+  <view class="ma">
+    <view class="ma1">
+      <image class="m1" src="/image/icon/组 1 拷贝 24.png"></image>
+      <view>马豹</view>
+    </view>
+    <view class="ma2">
+      <view class="maa1">
+        <view>北京广渠律师事务所</view>
+        <view class="maaa">
+          <image class="lvshi" src="/image/icon/lvshifuwu.png"></image>
+          <view>5年</view>
+        </view>
+      </view>
+      <view class="maa2">
+        <image class="you" src="/image/icon/youxiu.png"></image>
+        <view class="sp1">优选律师</view>
+
+        <image class="you" src="/image/icon/wangpai.png"></image>
+        <view>王牌律师</view>
+
+      </view>
+      <view class="p1">
+        擅长领域:婚姻家事、单位劳动争议、个人劳动争议、</view>
+      <view class="p1">
+        交通事故、
+      </view>
+    </view>
+
+
+  </view>
+  <view class="ma">
+    <view class="ma1">
+      <image class="m1" src="/image/icon/组 1 拷贝 24.png"></image>
+      <view>马豹</view>
+    </view>
+    <view class="ma2">
+      <view class="maa1">
+        <view>北京广渠律师事务所</view>
+        <view class="maaa">
+          <image class="lvshi" src="/image/icon/lvshifuwu.png"></image>
+          <view>5年</view>
+        </view>
+      </view>
+      <view class="maa2">
+        <image class="you" src="/image/icon/youxiu.png"></image>
+        <view class="sp1">优选律师</view>
+
+        <image class="you" src="/image/icon/wangpai.png"></image>
+        <view>王牌律师</view>
+
+      </view>
+      <view class="p1">
+        擅长领域:婚姻家事、单位劳动争议、个人劳动争议、</view>
+      <view class="p1">
+        交通事故、
+      </view>
+    </view>
+
+
+  </view>
+  <view class="ma">
+    <view class="ma1">
+      <image class="m1" src="/image/icon/组 1 拷贝 24.png"></image>
+      <view>马豹</view>
+    </view>
+    <view class="ma2">
+      <view class="maa1">
+        <view>北京广渠律师事务所</view>
+        <view class="maaa">
+          <image class="lvshi" src="/image/icon/lvshifuwu.png"></image>
+          <view>5年</view>
+        </view>
+      </view>
+      <view class="maa2">
+        <image class="you" src="/image/icon/youxiu.png"></image>
+        <view class="sp1">优选律师</view>
+
+        <image class="you" src="/image/icon/wangpai.png"></image>
+        <view>王牌律师</view>
+
+      </view>
+      <view class="p1">
+        擅长领域:婚姻家事、单位劳动争议、个人劳动争议、</view>
+      <view class="p1">
+        交通事故、
+      </view>
+    </view>
+
+
+  </view>
+</view>

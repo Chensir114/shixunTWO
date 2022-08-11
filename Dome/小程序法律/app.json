@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/xiao/index",
+    "pages/zixun/index",
+    "pages/suzh/index",
+    "pages/my/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "云台法律咨询",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./image/icon/首页.png",
+      "selectedIconPath": "./image/icon/首页 (1).png"
+    },
+    {
+      "pagePath": "pages/xiao/index",
+      "text": "消息",
+      "iconPath": "./image/icon/消息.png",
+      "selectedIconPath": "./image/icon/消息 (1).png"
+    },
+    {
+      "pagePath": "pages/zixun/index",
+      "text": "咨询",
+      "iconPath": "./image/icon/咨询.png",
+      "selectedIconPath": "./image/icon/咨询 (1).png"
+    },
+    {
+      "pagePath": "pages/suzh/index",
+      "text": "诉状",
+      "iconPath": "./image/icon/起诉状-线性.png",
+      "selectedIconPath": "./image/icon/起诉状-线性 (1).png"
+    },
+    {
+      "pagePath": "pages/my/index",
+      "text": "我的",
+      "iconPath": "./image/icon/我的小.png",
+      "selectedIconPath": "./image/icon/我的小 (1).png"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
