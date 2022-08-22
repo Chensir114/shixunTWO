@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #nav {
+            background: pink;
+
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+        }
+
+        h1 {
+            height: 100px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <div id="nav">
+        导航条
+    </div>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+    <p>内容填充</p>
+
+</body>
+<script>
+    window.onload = function () {
+        var nav = document.getElementById("nav");
+        var ot = nav.offsetTop;
+        window.onscroll = function () {
+            var t = document.documentElement.scrollTop;
+            if (t >= ot) {
+                nav.className = "fixed"
+            } else {
+                nav.className = "";
+            }
+        }
+    }
+</script>
+
+</html>
