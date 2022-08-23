@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {}
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <input type="checkbox" class="active">苹果
+        </li>
+        <li>
+            <input type="checkbox" class="active">香蕉
+        </li>
+        <li>
+            <input type="checkbox" class="active">草莓
+        </li>
+        <li>
+            <input type="checkbox" class="active">芒果
+        </li>
+        <li>
+            <input type="checkbox" class="active">葡萄
+        </li>
+        <li>
+            <input type="checkbox" class="active">西瓜
+        </li>
+        <li>
+            <input type="checkbox" class="active">香梨
+        </li>
+    </ul>
+    <button>全选</button>
+    <button>全不选</button>
+    <button>反选</button>
+</body>
+<script>
+    var btn = document.querySelectorAll('button')
+    var int = document.querySelectorAll('input')
+    var active = document.querySelector('.active')
+    var flag = true
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].index = i
+        btn[i].onclick = function () {
+            render(this.index)
+            console.log(this.index);
+        }
+    }
+
+    function render(i) {
+        if (i == 0) {
+            for (var i = 0; i < int.length; i++) {
+                int[i].checked = true
+            }
+        } else if (i == 1) {
+            for (var i = 0; i < int.length; i++) {
+                int[i].checked = false
+            }
+        } else if (i == 2) {
+            for (var i = 0; i < int.length; i++) {
+                int[i].checked = !int[i].checked
+            }
+        }
+    }
+</script>
+
+</html>

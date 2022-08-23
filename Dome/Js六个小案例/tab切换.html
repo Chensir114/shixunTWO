@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tab栏切换</title>
+	<style>
+		* {
+			border: 0;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.banner {
+			width: 585px;
+			height: 300px;
+			background-color: pink;
+			margin: 100px auto;
+		}
+
+		.banner .icon_list {
+			width: 100%;
+			height: 30px;
+			background-color: #dfdadf;
+
+		}
+
+		.icon_list li {
+			float: left;
+			line-height: 30px;
+			padding: 0 20px;
+			cursor: pointer;
+
+		}
+
+
+		.icon_list .icon1 {
+			background-color: #d52720;
+			color: #fff;
+		}
+
+
+		.icon_describ .item {
+
+			text-align: center;
+			margin-top: 20px;
+			font-size: 20px;
+			color: #5483c7;
+		}
+
+		.bgcolor {
+			background-color: #d52720;
+			color: #fff;
+		}
+
+		.display_on {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="banner">
+		<div class="icon_list">
+			<ul>
+				<li class="icon1">商品介绍</li>
+				<li>规格与包装</li>
+				<li>售后保障</li>
+				<li>商品评价(5000)</li>
+				<li>手机社区</li>
+			</ul>
+		</div>
+		<div class="icon_describ">
+			<div class="item" style="display:block;">本产品特别好，只要你喜欢就来买把！！</div>
+			<div class="item">一生所爱<br>520<br>一生一世在一起！</div>
+			<div class="item">不包退！不包退！</div>
+			<div class="item">特别好用，用了还想用！</div>
+			<div class="item">大家一起来探讨吧！</div>
+		</div>
+	</div>
+
+	<script>
+		var lists = document.querySelector('.icon_list').querySelectorAll('li');
+		var items = document.querySelector('.icon_describ').querySelectorAll('.item')
+
+		console.log(items);
+
+		for (var i = 0; i < lists.length; i++) {
+
+			lists[i].setAttribute('index', i);
+			lists[i].onclick = function () {
+
+				for (var j = 0; j < lists.length; j++) {
+					lists[j].className = '';
+
+					items[j].style.display = 'none';
+				}
+
+				this.className = 'bgcolor';
+
+
+
+				var index = this.getAttribute('index');
+
+				items[index].style.display = 'block';
+			}
+		}
+	</script>
+</body>
+
+</html>

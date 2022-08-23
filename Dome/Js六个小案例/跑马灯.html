@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover {
+            background-color: black;
+        }
+
+        body {
+            background-color: yellow;
+        }
+
+        .hover1 {
+            background-color: aqua;
+        }
+
+        .hover2 {
+            background-color: red;
+        }
+
+        .hover3 {
+            background-color: green;
+        }
+
+        .hover4 {
+            background-color: orchid;
+        }
+
+        .hover5 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <button id="on-off">关灯</button>
+    <button id="cut">点击跑马灯</button>
+
+</body>
+<script>
+    var Switch = document.getElementById('on-off');
+    var bodys = document.body;
+    var flag = false;
+    Switch.onclick = function () {
+        flag = !flag
+        if (flag) {
+            bodys.className = 'hover'
+            Switch.innerHTML = '开灯'
+
+
+        } else {
+            bodys.className = ''
+            Switch.innerHTML = '关灯'
+
+        }
+    }
+
+    var cut = document.getElementById('cut');
+    var flag = false;
+    cut.onclick = function () {
+        flag = !flag
+        if (flag) {
+            var num = Math.floor(Math.random() * 5 + 1)
+            bodys.className = 'hover' + num;
+
+        } else {
+            bodys.className = ''
+        }
+    }
+</script>
+
+</html>

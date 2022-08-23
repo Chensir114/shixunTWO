@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .message_box{
+        width: 500px;
+        /* height: 300px; */
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="title">用户留言</div>
+        <div class="message_box" id="messageBox"></div>
+        <div><input id="myInput" type="text" placeholder="请输入留言类容"><button id="doPost">提交</button></div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+
+        var oMessageBox = document.getElementById("messageBox");
+        var oInput = document.getElementById("myInput");
+        var oPostBtn = document.getElementById("doPost");
+
+        oPostBtn.onclick = function () {
+            if (oInput.value) {
+                var oTime = document.createElement("div");
+                oTime.className = "time";
+                var myDate = new Date();
+                oTime.innerHTML = myDate.toLocaleString();
+                oMessageBox.appendChild(oTime);
+
+              
+                var oMessageContent = document.createElement("div");
+                oMessageContent.className = "message_content";
+                oMessageContent.innerHTML = oInput.value;
+                oInput.value = "";
+                oMessageBox.appendChild(oMessageContent);
+            }
+
+        }
+
+    }
+</script>
+
+</html>

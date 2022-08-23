@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #start,
+        .awards {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: rgb(233, 193, 15);
+            margin-left: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            font-family: '华文行楷';
+            color: white;
+            border-radius: 50%;
+        }
+
+        #start {
+            background: #000;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="awards">特等奖</div>
+        <div class="awards">一等奖</div>
+        <div class="awards">二等奖</div>
+        <div class="awards">三等奖</div>
+        <div class="awards">安慰奖</div>
+        <div class="awards">鼓励奖</div>
+        <div id="start">开始抽奖</div>
+    </div>
+
+</body>
+<script>
+    //1. 选出所有需要进行操作的元素
+    let btn = document.querySelector('#start'),
+        awards = document.querySelectorAll('.awards');
+
+    //2.此处先进行设置一个定时器，方便后续清除，也可以防止重复触发定时器产生的bug
+    let timer = null;
+
+    //3.定义一个随机奖项的方法
+    function randomAwards() {
+        //设置一个初始值作为判断时间停止的标志
+        let logo = 0;
+        //3.1. 触发一个定时器，此处判断是防止重复触发定时器
+        if (timer == null) {
+            timer = setInterval(() => {
+                logo++;
+                //3.2. 获得一个随机数作为索引，算法是元素的最后一个索引值 - 第一个索引值 + 初始值
+                let random = Math.round(Math.random() * (awards.length - 1 - 0) + 0);
+                //3.3. 排他思想：将所有元素恢复原来的样式
+                for (let i = 0; i < awards.length; i++) {
+                    awards[i].style.backgroundColor = "rgb(233, 193, 15)";
+                }
+                //3.4. 给选中元素添加样式
+                awards[random].style.backgroundColor = 'orange';
+                //3.5. 设置定时器有效时间，停止定时器。因为定时器获得随机数的时间是100ms，即0.1秒，所以可以获得的随机数个数便是规定停止的时间/0.1秒，此处规定停止时间是5秒
+                if (logo >= 5 / (100 / 1000)) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+            }, 100)
+        }
+    }
+
+    //点击开始抽奖按钮进行抽奖
+    btn.addEventListener('click', randomAwards());
+</script>
+
+</html>
