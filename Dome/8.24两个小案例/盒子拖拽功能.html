@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            top: 0;
+            left: 0;
+            position: absolute;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">带我走</div>
+</body>
+<script>
+    var box = document.querySelector('.box')
+    var divY = 0
+    var divX = 0
+    var mouseX = 0
+    var mouseY = 0
+    box.onmousedown = function (e) {
+        // console.log(e);
+        divX = e.offsetX
+        divY = e.offsetY
+        mouseX = e.clientX
+        mouseY = e.clientY
+    }
+    box.onmousemove = function (e) {
+        console.log(e);
+        var disX = e.clientX - mouseX
+        var disY = e.clientY - mouseY
+        box.style.left = disX + divX + "px"
+        box.style.top = disY + divY + "px"
+    }
+</script>
+
+</html>

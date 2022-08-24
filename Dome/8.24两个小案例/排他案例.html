@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv1 {
+            width: 350px;
+            height: 550px;
+            position: relative;
+            background-color: #00FFFF;
+            margin-left: 500px;
+        }
+
+        .mind {
+            width: 100px;
+            height: 80px;
+            margin-top: 10px;
+            margin-left: 13px;
+            float: left;
+            line-height: 40px;
+            padding-top: 20px;
+            text-align: center;
+            color: #fff;
+            background-color: #0000FF;
+        }
+
+        #dv2 {
+            width: 350px;
+            height: 100px;
+            line-height: 50px;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 30px;
+            background-color: #FF1E32;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="dv1">
+
+        <div id="dv2"></div>
+    </div>
+
+</body>
+<script>
+    var dv11 = document.getElementById('dv1')
+    var mindd = document.getElementsByClassName('mind')
+    var dv22 = document.getElementById('dv2')
+    var arr1 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Ocj", "Nov", "Dec"]
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    for (var i = 0; i < arr1.length; i++) {
+        mindiv = document.createElement("div")
+        mindiv.className = "mind"
+        mindiv.innerHTML = arr[i] + "</br>" + arr1[i]
+        dv11.appendChild(mindiv)
+    }
+    for (var i = 0; i < mindd.length; i++) {
+        mindd[i].onclick = function () {
+            for (var j = 0; j < mindd.length; j++) {
+                mindd[j].style.backgroundColor = "#0000FF"
+            }
+            this.style.backgroundColor = "#9acd32"
+            dv22.innerHTML = this.innerHTML
+        }
+    }
+</script>
+
+</html>
